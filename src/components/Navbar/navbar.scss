@@ -1,0 +1,67 @@
+.Navbar_head{
+    height: 3.9rem;
+    max-height: 3.9rem;
+    background-color: #111317;
+    display: flex;
+    .App_logoContainer{
+        background-color: #323744;
+        flex: 0.1;
+        height: 3.2rem;
+        padding: 6px 28px;
+        display: flex;
+        width: auto;
+        align-items: center;
+        .App_logo{
+            // height: 3rem;
+            max-height: 40px;
+            width: auto;
+            background-color: #323744;
+        }
+    }
+    .App_menu{
+        height: inherit;
+        display: flex;
+        flex: 0.9;
+        justify-content: space-between;
+        .menu1{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 52%;
+            p{
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            .GenreDiv{
+                display: flex;
+                align-items: center;
+                h4{
+                    font-weight: 400;
+                    color: #fff;
+
+                }
+                .downwardIcon{
+                    color: #fff;
+                    position:relative;
+                    top: 2px;
+                }
+            }
+        }
+        .menu2{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 20%;
+            height: 100%;
+            p{
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            
+        }
+    }
+    
+}
