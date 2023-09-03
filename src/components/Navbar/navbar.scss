@@ -29,14 +29,16 @@
             justify-content: space-around;
             height: 100%;
             width: 52%;
-            p{
+            a{
                 color: #fff;
                 font-size: 1rem;
                 font-weight: 400;
+                text-decoration: none;
             }
             .GenreDiv{
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 h4{
                     font-weight: 400;
                     color: #fff;
@@ -55,10 +57,11 @@
             justify-content: space-around;
             width: 20%;
             height: 100%;
-            p{
+            a{
                 color: #fff;
                 font-size: 1rem;
                 font-weight: 400;
+                text-decoration: none;
             }
             
         }
