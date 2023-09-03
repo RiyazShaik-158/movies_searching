@@ -52,7 +52,6 @@ function HomeWelcome() {
           <p className='featured_line'>- Chromecast supported</p>
           <p className='featured_line'>- Subtitle in multi-languages</p>
         </section>
-      <h3>Welcome to movies_searching</h3>
     </div>
   )
 }
