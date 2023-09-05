@@ -2,6 +2,8 @@ import React from 'react';
 import './navbar.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
 
 function Navbar() {
   return (
@@ -18,8 +20,14 @@ function Navbar() {
             <Link to="/tvseries">TV Series</Link>
         </div>
         <div className='menu2'>
-          <Link>Search</Link>
-          <Link to="/login">Login</Link>
+          <Link>
+            <div className='GenreDiv'><h4>Search</h4><SearchIcon className="downwardIcon"/></div>
+          </Link>
+          
+          
+          <Link to="/login">
+          <div className='GenreDiv'><h4>Login</h4><PersonIcon className="downwardIcon"/></div>
+          </Link>
         </div>
       </div>
     </div>

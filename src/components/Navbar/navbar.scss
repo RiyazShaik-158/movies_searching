@@ -1,5 +1,6 @@
 .Navbar_head{
     height: 3.8rem;
+    // width: inherit;
     max-height: 3.8rem;
     background-color: #111317;
     display: flex;
@@ -62,6 +63,22 @@
                 font-size: 1rem;
                 font-weight: 400;
                 text-decoration: none;
+            }
+            .GenreDiv{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                h4{
+                    font-weight: 400;
+                    color: #fff;
+
+                }
+                .downwardIcon{
+                    color: #fff;
+                    position:relative;
+                    top: 2px;
+                }
             }
             
         }
