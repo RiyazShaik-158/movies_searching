@@ -1,0 +1,19 @@
+.Login_head{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Login_contentBox{
+        width: 35%;
+        height: 80%;
+        background-color: #000;
+        padding: 20px;
+
+        .Login_form{
+            .forUsername{
+                
+            }
+        }
+    }
+}

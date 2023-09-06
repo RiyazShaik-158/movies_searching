@@ -26,7 +26,7 @@ function Navbar() {
           
           
           <Link to="/login">
-          <div className='GenreDiv'><h4>Login</h4><PersonIcon className="downwardIcon"/></div>
+            <div className='GenreDiv'><h4>Login</h4><PersonIcon className="downwardIcon"/></div>
           </Link>
         </div>
       </div>
