@@ -1,11 +1,32 @@
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, createTheme } from '@mui/material';
 import React, { useState } from 'react';
 import './login.scss';
+import { ThemeProvider } from '@emotion/react';
 
 function Login() {
 
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
+
+    const theme = createTheme({
+        components: {
+            MuiButton:{
+                styleOverrides:{
+                    root : ({ownerState}) =>({
+                        ...(ownerState.variant === 'contained' &&
+                        ownerState.color === 'success' && {
+                            color : '#fff',
+                            fontWeight : '500',
+                            fontSize : '18px',
+                            fontFamily : 'inherit',
+                            textTransform : 'none',
+                            borderRadius:'10px'
+                        })
+                    })
+                }
+            }
+        }
+    })
 
   return (
     <div className='Login_head'>
@@ -29,7 +50,10 @@ function Login() {
                 className='forUsername'
                 onChange={(e)=>setPassword(e.target.value)}
             />
-            <Button variant='contained' color='success'>Login</Button>
+            <ThemeProvider theme={theme}>
+                <Button variant='contained' color='success'>Login</Button>
+            </ThemeProvider>
+            
         </form>
       </div>
     </div>
