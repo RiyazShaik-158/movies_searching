@@ -4,12 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
     .Login_contentBox{
-        width: 35%;
+        width: 25%;
         height: 80%;
         background-color: #000;
-        padding: 20px;
-
+        padding:3rem 4rem;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        alig
         .Login_form{
             .forUsername{
                 

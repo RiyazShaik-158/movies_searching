@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import './login.scss';
 
@@ -29,6 +29,7 @@ function Login() {
                 className='forUsername'
                 onChange={(e)=>setPassword(e.target.value)}
             />
+            <Button variant='contained' color='success'>Login</Button>
         </form>
       </div>
     </div>
