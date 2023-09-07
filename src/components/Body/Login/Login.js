@@ -20,7 +20,8 @@ function Login() {
                             fontSize : '18px',
                             fontFamily : 'inherit',
                             textTransform : 'none',
-                            borderRadius:'10px'
+                            borderRadius:'6px',
+                            marginTop:"10px"
                         })
                     })
                 }

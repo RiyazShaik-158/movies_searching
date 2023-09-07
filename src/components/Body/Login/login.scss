@@ -14,12 +14,16 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-        alig
-        .Login_form{
+        // alig
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
             .forUsername{
-                border-radius: 5px;
+                border-radius:5px;
                 background-color: #fff;
-                font-size: 16px;
+                font-size: 20px;
             }
         }
     }
