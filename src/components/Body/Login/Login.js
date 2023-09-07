@@ -35,21 +35,23 @@ function Login() {
         <h4>LOGIN</h4>
         <form className='Login_form'>
             <label htmlFor='username'>Username</label>
-            <TextField 
+            {/* <TextField 
                 name='username'
                 id='username'
                 value={username}
                 className='forUsername'
                 onChange={(e)=>setUsername(e.target.value)}
-            />
+            /> */}
+            <input name='username' id='username' value={username} className='forUsername'  onChange={(e)=>setUsername(e.target.value)}/>
             <label htmlFor='password'>Password</label>
-            <TextField 
+            {/* <TextField 
                 name='password'
                 id='password'
                 value={password}
                 className='forUsername'
                 onChange={(e)=>setPassword(e.target.value)}
-            />
+            /> */}
+            <input name='password' id='password' value={password} className='forUsername'  onChange={(e)=>setPassword(e.target.value)}/>
             <ThemeProvider theme={theme}>
                 <Button variant='contained' color='success'>Login</Button>
             </ThemeProvider>
