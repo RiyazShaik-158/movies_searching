@@ -4,7 +4,7 @@ import './home.scss';
 function Home() {
   return (
     <div className='homeMain'>
-      This is for home component
+      
     </div>
   )
 }
