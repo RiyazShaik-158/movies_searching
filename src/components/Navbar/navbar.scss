@@ -83,7 +83,7 @@
             .GenreDiv{
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 8px;
                 cursor: pointer;
                 h4{
                     font-weight: 400;
@@ -94,6 +94,7 @@
                     color: #fff;
                     position:relative;
                     top: 2px;
+                    font-weight: 700;
                 }
             }
             

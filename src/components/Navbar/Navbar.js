@@ -47,12 +47,12 @@ function Navbar({searchText,setSearchText}) {
             </div>
             <div className='menu2'>
                 {/* <Link onClick={()=>setSearchStarting(true)}> */}
-                  <div className='GenreDiv' onClick={()=>setSearchStarting(true)}><h4>Search</h4><SearchIcon className="downwardIcon"/></div>
+                  <div className='GenreDiv' onClick={()=>setSearchStarting(true)}><SearchIcon fontSize='small' className="downwardIcon"/><h4>Search</h4></div>
                 {/* </Link> */}
                 
                 
                 <Link to="/login">
-                  <div className='GenreDiv'><h4>Login</h4><PersonIcon className="downwardIcon"/></div>
+                  <div className='GenreDiv'><PersonIcon className="downwardIcon"/><h4>Login</h4></div>
                 </Link>
               </div>
             </div>

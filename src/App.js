@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeWelcome from './components/Body/HomeWelcome/HomeWelcome';
 import Home from './components/Body/Home/Home';
 import Login from './components/Body/Login/Login';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [searchText,setSearchText] = useState("");
@@ -17,6 +18,7 @@ function App() {
             <Route path='/home' element={<Home/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
           </Routes>
+        <Footer />
       </BrowserRouter>
       
 

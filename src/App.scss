@@ -6,13 +6,8 @@
 
 .App{
     background-color: #111317;
-    width: 100vw;
+    // width: 100vw;
     height: 100vh; 
     display: flex;
     flex-direction: column;
-    .Navbar_head{
-        width: inherit;
-        flex: 0.1;
-        // border: 2px solid blue;
-    }
 }

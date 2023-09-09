@@ -17,7 +17,7 @@ function HomeWelcome() {
                 backgroundColor: '#e64d25',
                 color: '#fff',
                 fontWeight:'500',
-                fontSize:'18px',
+                fontSize:'17px',
                 fontFamily:'inherit',
                 textTransform:'none'
               }),
@@ -38,7 +38,7 @@ function HomeWelcome() {
         <div className='homeWelcome_content_afterImage'>
           <p>Please help us by sharing this site with your friends. Thanks!</p>
           <ThemeProvider theme={theme}>
-            <Link to='/home'><Button color='warning' className="homeWelcome_content_afterImage_button" variant='contained'>Browse All Movies & Series <ArrowForwardIcon fontSize='small'/></Button></Link>
+            <Link to='/home'><Button color='warning' className="homeWelcome_content_afterImage_button" variant='contained'>Browse All Movies & Series <ArrowForwardIcon fontSize='small' sx={{paddingLeft:"15px",fontWeight:"700"}}/></Button></Link>
           </ThemeProvider>
         </div>
         
