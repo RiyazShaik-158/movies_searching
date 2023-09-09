@@ -13,6 +13,9 @@ const data = [
 ]
 
 function Home() {
+  
+
+
   return (
     <div className='homeMain'>
       {

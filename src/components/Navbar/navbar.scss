@@ -3,7 +3,23 @@
     // width: inherit;
     max-height: 3.8rem;
     background-color: #111317;
+    // border:2px solid #fff;
+    color: #fff;
     display: flex;
+
+    .searchNewDiv{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        padding: 20px 0;
+        .forSearch{
+            display: flex;
+            gap: 20px;
+        }
+    
+    }
+    
+
     .App_logoContainer{
         background-color: #323744;
         flex: 0.09;
