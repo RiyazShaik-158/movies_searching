@@ -26,7 +26,9 @@ function Footer() {
             <div><p>Join Twitter</p></div>
           </div>
         </div>
-        <div className='goku_logo_again'></div>
+        <div className='goku_logo_again'>
+          <img src='gokuLogo.png' alt='gokuLogo'/>
+        </div>
       </footer>
     </div>
   )
