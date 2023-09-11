@@ -16,7 +16,7 @@ function Footer() {
             </div>
             
           </div>
-          <div className='Genre'>
+          <div className='Footer_aboutDiv'>
             <h4>Genre</h4>
             <div className='subMenu_inFooter'>
               <p>Action</p>
@@ -28,7 +28,7 @@ function Footer() {
             </div>
             
           </div>
-          <div className='Connect us'>
+          <div className='Footer_aboutDiv'>
             <h4>Connect us</h4>
             <div className='subMenu_inFooter'>
               <div><p>Join Group Telegram</p></div>

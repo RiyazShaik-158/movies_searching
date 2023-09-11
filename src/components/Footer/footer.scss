@@ -1,5 +1,7 @@
 .Footer_main{
-    height: 5rem;
+    // height: 6rem;
+    height: 600px;
+    color: #fff;
     .Footer_content{
         background-color: #111317;
         padding:45px 25px ;
@@ -8,9 +10,40 @@
 
 
         .goku_logo_again{
+            flex: 0.2;
+            border: 2px solid #fff;
             img{
                 max-height: 40px;
                 width: auto;
+            }
+        }
+
+        .Footer_content_aboutDiv{
+            border: 1px solid #fff;
+            flex: 0.65;
+            display: flex;
+            gap: 15px;
+            padding: 25px 10px;
+
+            .Footer_aboutDiv{
+                display: flex;
+                flex: 0.27;
+                flex-direction: column;
+                gap: 12px;
+
+                .subMenu_inFooter{
+                    display: flex;
+                    // padding:0 10px;
+                    gap: 10px;
+                    // row-gap: 35px;
+                    column-gap: 35px;
+                    
+                    width: 60%;
+                    flex-wrap: wrap;
+                    p{
+                        font-size: 14px;
+                    }
+                }
             }
         }
        
