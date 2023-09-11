@@ -27,9 +27,9 @@ function Navbar({searchText,setSearchText}) {
           <div className='searchNewDiv'>
             <div className='forSearch'>
               <SearchIcon />
-              <input className='Navbar_searchInput' placeholder='Enter keywords...' value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
+              <input autoFocus className='Navbar_searchInput' placeholder='Enter keywords...' value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
             </div>
-            <HighlightOffIcon onClick={handleSearchClose} />
+            <HighlightOffIcon onClick={handleSearchClose} className='closeButton_search'/>
           </div>
         </div>
         :
