@@ -35,9 +35,11 @@ function Footer() {
           <div className='Footer_aboutDiv'>
             <h4>Connect us</h4>
             <div className='subMenu_inFooter_connections'>
-              <div><TelegramIcon/><p>Join Group Telegram</p></div>
-              <div><RedditIcon/><p>Join Group Reddit</p></div>
-              <div><TwitterIcon/><p>Join Twitter</p></div>
+              <div 
+                className='connectingIconsDiv'
+              ><TelegramIcon className='telegramIcon'  /><p>Join Group Telegram</p></div>
+              <div className='connectingIconsDiv'><RedditIcon/><p>Join Group Reddit</p></div>
+              <div className='connectingIconsDiv'><TwitterIcon/><p>Join Twitter</p></div>
             </div>
             
           </div>

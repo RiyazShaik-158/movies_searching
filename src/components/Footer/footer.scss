@@ -63,8 +63,35 @@
                     flex-direction: column;
                     gap: 10px;
                     padding:0 10px;
+                    
+                    .connectingIconsDiv{
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        // justify-content: center;
+                        // height: 15px;
+                        padding:6px ;
+                        padding-left: 25px;
+                        color: #323744;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        
+                    }
+                    :hover{
+                        color: #fff;
+                        background-color:#e64d25 ;
+                    }
                     p{
                         font-size: 14px;
+                        font-weight: 500;
+                    }
+
+                    .telegramIcon{
+                        color: #fff;
+                        background-color: #323744;
+                        border-radius: 50%;
+                        padding: 2px;
+                        font-size: 16px;
                     }
                 }
             }
