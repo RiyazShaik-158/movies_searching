@@ -1,5 +1,9 @@
 import React from 'react';
 import './footer.scss';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import RedditIcon from '@mui/icons-material/Reddit';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
 
 function Footer() {
   return (
@@ -31,9 +35,9 @@ function Footer() {
           <div className='Footer_aboutDiv'>
             <h4>Connect us</h4>
             <div className='subMenu_inFooter_connections'>
-              <div><p>Join Group Telegram</p></div>
-              <div><p>Join Group Reddit</p></div>
-              <div><p>Join Twitter</p></div>
+              <div><TelegramIcon/><p>Join Group Telegram</p></div>
+              <div><RedditIcon/><p>Join Group Reddit</p></div>
+              <div><TwitterIcon/><p>Join Twitter</p></div>
             </div>
             
           </div>
