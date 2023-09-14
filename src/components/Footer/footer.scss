@@ -49,11 +49,26 @@
                     column-gap: 38px;
                     width: 100%;
                     flex-wrap: wrap;
-                    p{
-                        font-size: 14px;
+                    .Genre_withFolder_div{
+                        display: flex;
+                        align-items: center;
+                        // gap: 6px;
                         width: 37%;
-                        padding-left: 10px;
+                        // padding-left: 5px;
+                        .folderIcon_color{
+                            color: #e64d25;
+                        }
+                        p{
+                            font-size: 14px;
+                            // width: 37%;
+                            padding-left: 10px;
+
+                        }
+                        :hover{
+                            color: #e64d25;
+                        }
                     }
+                    
                 }
 
                 
@@ -66,7 +81,7 @@
                     
                     .connectingIconsDiv{
                         display: flex;
-                        gap: 5px;
+                        gap: 10px;
                         align-items: center;
                         // justify-content: center;
                         // height: 15px;
@@ -81,6 +96,10 @@
                         color: #fff;
                         background-color:#e64d25 ;
                     }
+                    :hover .telegramIcon{
+                        color: #e64d25;
+                        background-color: #fff;
+                    }
                     p{
                         font-size: 14px;
                         font-weight: 500;
@@ -91,7 +110,7 @@
                         background-color: #323744;
                         border-radius: 50%;
                         padding: 2px;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -122,6 +141,9 @@
                         width: 40%;
                         // align-self: flex-start;
                         // text-align: left;
+                    }
+                    :hover{
+                        color: #e64d25;
                     }
                 }
             }

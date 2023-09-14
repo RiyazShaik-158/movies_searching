@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.scss';
+import FolderIcon from '@mui/icons-material/Folder';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import RedditIcon from '@mui/icons-material/Reddit';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -23,12 +24,18 @@ function Footer() {
           <div className='Footer_aboutDiv'>
             <h4>Genre</h4>
             <div className='subMenu_inFooter_genre'>
-              <p>Action</p>
+              {/* <p>Action</p>
               <p>Fantasy</p>
               <p>Comedy</p>
               <p>Horror</p>
               <p>Drama</p>
-              <p>Mystery</p>
+              <p>Mystery</p> */}
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Action</p></div>
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Fantasy</p></div>
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Comedy</p></div>
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Horror</p></div>
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Drama</p></div>
+              <div className='Genre_withFolder_div'><FolderIcon fontSize='smaller' className='folderIcon_color'/><p>Mystery</p></div>
             </div>
             
           </div>
@@ -37,9 +44,9 @@ function Footer() {
             <div className='subMenu_inFooter_connections'>
               <div 
                 className='connectingIconsDiv'
-              ><TelegramIcon className='telegramIcon'  /><p>Join Group Telegram</p></div>
-              <div className='connectingIconsDiv'><RedditIcon/><p>Join Group Reddit</p></div>
-              <div className='connectingIconsDiv'><TwitterIcon/><p>Join Twitter</p></div>
+              ><TelegramIcon className='telegramIcon' fontSize='smaller' /><p>Join Group Telegram</p></div>
+              <div className='connectingIconsDiv'><RedditIcon fontSize='smaller'/><p>Join Group Reddit</p></div>
+              <div className='connectingIconsDiv'><TwitterIcon fontSize='smaller'/><p>Join Twitter</p></div>
             </div>
             
           </div>
