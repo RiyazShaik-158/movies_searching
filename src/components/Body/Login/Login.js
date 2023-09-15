@@ -21,7 +21,8 @@ function Login() {
                             fontFamily : 'inherit',
                             textTransform : 'none',
                             borderRadius:'6px',
-                            marginTop:"10px"
+                            marginTop:"10px",
+                            width:"25%"
                         })
                     })
                 }
