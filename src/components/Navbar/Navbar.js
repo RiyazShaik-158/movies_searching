@@ -18,6 +18,7 @@ function Navbar({ searchText, setSearchText }) {
 
   const handleSearchClose = () => {
     setSearchStarting(false);
+    setFakeSearch("");
   }
 
   const handleMouseEnter = (event, content) => {
