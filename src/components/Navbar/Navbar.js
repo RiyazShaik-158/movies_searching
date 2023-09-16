@@ -82,7 +82,7 @@ function Navbar({ searchText, setSearchText }) {
               <Popover
                 id="mouse-over-popover"
                 sx={{
-                  pointerEvents: 'none'
+                  pointerEvents: 'all'
                 }}
                 open={open}
                 anchorEl={anchorEl}
@@ -112,7 +112,7 @@ function Navbar({ searchText, setSearchText }) {
                     className='genre_popover_div'
                   >
                     {popoverContent.map((item, idx) => (
-                      <p onClick={handlePopoverClose} key={idx} style={{ fontSize: '14px', width: '30%', pointerEvents: 'all','&:hover':{cursor:'pointer',color:'#e64d25'} }}>{item}</p>
+                      <p onClick={handlePopoverClose} key={idx} style={{ fontSize: '14px', width: '30%', pointerEvents: 'all','&hover':{cursor:'pointer',color:'#e64d25',fontSize:'12px'}}}>{item}</p>
                     ))}
                   </div>
                 )}
