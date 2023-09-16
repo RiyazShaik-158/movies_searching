@@ -7,7 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import { genres } from './forGenres';
 import { countries } from './forCountries';
-import { Popover } from '@mui/material';
+import {  Modal, Popover } from '@mui/material';
 
 function Navbar({ searchText, setSearchText }) {
   const [searchStarting, setSearchStarting] = useState(false);
@@ -34,21 +34,36 @@ function Navbar({ searchText, setSearchText }) {
   return (
     <>
       {searchStarting ? (
-        <div className='Navbar_head'>
-          <div className='searchNewDiv'>
-            <div className='forSearch'>
-              <SearchIcon />
-              <input
-                autoFocus
-                className='Navbar_searchInput'
-                placeholder='Enter keywords...'
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-              />
-            </div>
-            <HighlightOffIcon onClick={handleSearchClose} className='closeButton_search' />
+        // <div className='Navbar_head'>
+        //   <div className='searchNewDiv'>
+        //     <div className='forSearch'>
+        //       <SearchIcon />
+        //       <input
+        //         autoFocus
+        //         className='Navbar_searchInput'
+        //         placeholder='Enter keywords...'
+        //         value={searchText}
+        //         onChange={(e) => setSearchText(e.target.value)}
+        //       />
+        //     </div>
+        //     <HighlightOffIcon onClick={handleSearchClose} className='closeButton_search' />
+        //   </div>
+        // </div>
+        <Modal
+          open={searchStarting}
+          onClose={handleSearchClose}
+          sx={{backgroundColor:'rgba(0,0,0,0.8)'}}
+        >
+          <div style={{width:'100%',height:'100%'}}>
+            <SearchIcon/>
+            <input 
+              placeholder='Enter keywords...'
+              autoFocus
+              style={{background:'none'}}
+            />
+            <HighlightOffIcon/>
           </div>
-        </div>
+        </Modal>
       ) : (
         <div className='Navbar_head'>
           <div className='App_logoContainer'>
