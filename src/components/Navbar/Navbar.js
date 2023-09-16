@@ -54,14 +54,20 @@ function Navbar({ searchText, setSearchText }) {
           onClose={handleSearchClose}
           sx={{backgroundColor:'rgba(0,0,0,0.8)'}}
         >
-          <div style={{width:'100%',height:'100%'}}>
-            <SearchIcon/>
-            <input 
-              placeholder='Enter keywords...'
-              autoFocus
-              style={{background:'none'}}
-            />
-            <HighlightOffIcon/>
+          <div style={{width:'inherit',height:'inherit',color:'#fff'}}>
+            <div style={{border:'2px solid #fff' , width:'inherit',height:'5rem',display:'flex',alignItems:'center',padding:'0 40px',justifyContent:'space-between',marginTop:'30px'}}>
+              <div style={{display:'flex',alignItems:'center',height:'100%',flex:'0.8',borderBottom:'1px solid #fff',justifyContent:'center'}}>
+                <SearchIcon fontSize='large' sx={{width:'8%'}}/>
+                <input 
+                  placeholder='Enter keywords...'
+                  autoFocus
+                  style={{background:'none',border:'none',width:'92%','&::placeholder':{fontSize:'25px'}}}
+                />
+              </div>
+              
+              <HighlightOffIcon/>
+            </div>
+            
           </div>
         </Modal>
       ) : (
