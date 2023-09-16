@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import './navbar.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import { genres } from './forGenres';
 import { countries } from './forCountries';
 import {  Modal, Popover } from '@mui/material';
+import SearchResults from './onChangeSearchResults/SearchResults';
 
 function Navbar({ searchText, setSearchText }) {
   const [searchStarting, setSearchStarting] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [popoverContent, setPopoverContent] = useState(null);
+  const [fakeSearch,setFakeSearch] = useState("");
 
   const handleSearchClose = () => {
     setSearchStarting(false);
@@ -55,18 +57,27 @@ function Navbar({ searchText, setSearchText }) {
           sx={{backgroundColor:'rgba(0,0,0,0.8)'}}
         >
           <div style={{width:'inherit',height:'inherit',color:'#fff'}}>
-            <div style={{border:'2px solid #fff' , width:'inherit',height:'5rem',display:'flex',alignItems:'center',padding:'0 40px',justifyContent:'space-between',marginTop:'30px'}}>
-              <div style={{display:'flex',alignItems:'center',height:'100%',flex:'0.8',borderBottom:'1px solid #fff',justifyContent:'center'}}>
-                <SearchIcon fontSize='large' sx={{width:'8%'}}/>
+            <div style={{width:'inherit',height:'5rem',display:'flex',alignItems:'center',padding:'0 40px',justifyContent:'space-between',marginTop:'20px'}}>
+              <div></div>
+              <div style={{flex:'.95',display:'flex',alignItems:'center',gap:'20px',height:'100%',borderBottom:'2px solid #fff'}}>
+                <SearchIcon fontSize='large'/>
                 <input 
                   placeholder='Enter keywords...'
                   autoFocus
-                  style={{background:'none',border:'none',width:'92%','&::placeholder':{fontSize:'25px'}}}
+                  value = {fakeSearch}
+                  onChange={(e) => setFakeSearch(e.target.value)}
+                  style={{background:'none',outline:'none',fontSize:'1.5rem',color:'#fff',border:'none','::placeholder':{fontSize:'25px'}}}
                 />
-              </div>
+              </div>              
               
-              <HighlightOffIcon/>
+              <CancelRoundedIcon sx={{fontSize:'40px'}}/>          
+              
             </div>
+            {
+              fakeSearch && 
+              <SearchResults fakeSearch={fakeSearch}/>
+            }
+            
             
           </div>
         </Modal>
