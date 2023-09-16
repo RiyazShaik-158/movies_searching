@@ -70,7 +70,7 @@ function Navbar({ searchText, setSearchText }) {
                 />
               </div>              
               
-              <CancelRoundedIcon sx={{fontSize:'40px'}}/>          
+              <CancelRoundedIcon onClick={handleSearchClose} sx={{fontSize:'40px',cursor:'pointer'}}/>          
               
             </div>
             {
