@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const sampleUser = {
     userName : "Riyaz",
-    password : 1234
+    password : "1234"
 }
 
 function Login({userLoggedIn,setUserLoggedIn}) {
@@ -40,7 +40,7 @@ function Login({userLoggedIn,setUserLoggedIn}) {
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         // console.log(e)
-        if(e.target[0].value == sampleUser.userName && e.target[1].value == sampleUser.password){
+        if(e.target[0].value === sampleUser.userName && e.target[1].value === sampleUser.password){
             alert("Login successful");
             navigate('/')
         }
@@ -70,7 +70,7 @@ function Login({userLoggedIn,setUserLoggedIn}) {
                 onChange={(e)=>setPassword(e.target.value)}
             /> */}
             <input type='password' name='password' id='password' value={password} className='forUsername'  onChange={(e)=>setPassword(e.target.value)}/>
-            <p>Forgot password?</p>
+            <p className='forgotPasswordLink'>Forgot password?</p>
             <ThemeProvider theme={theme}>
                 <Button variant='contained' color='success' type='submit'>Login</Button>
             </ThemeProvider>
