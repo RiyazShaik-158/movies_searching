@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
@@ -14,7 +14,8 @@ function Navbar({ searchText, setSearchText }) {
   const [searchStarting, setSearchStarting] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [popoverContent, setPopoverContent] = useState(null);
-  const [fakeSearch,setFakeSearch] = useState("");
+  const [fakeSearch,setFakeSearch] = useState(""); // for taking input value from search
+  const [moviesData,setMoviesData] = useState([]); // for taking movies from api response
 
   const handleSearchClose = () => {
     setSearchStarting(false);
@@ -33,6 +34,22 @@ function Navbar({ searchText, setSearchText }) {
   };
 
   const open = Boolean(anchorEl);
+
+  const handleFakeSearch = (e) => {
+    setFakeSearch(e.target.value);
+    // if(fakeSearch)
+  }
+
+  useEffect(()=>{
+    fakeSearch && searchingFunction(fakeSearch)
+  },[fakeSearch])
+
+  const searchingFunction = async (movie) => {
+    const resp = await fetch(`http://www.omdbapi.com/?s=${movie}&apikey=43db7d14`);
+    const data = await resp.json()
+    setMoviesData(data.Search);
+  }
+
 
   return (
     <>
@@ -66,7 +83,8 @@ function Navbar({ searchText, setSearchText }) {
                   placeholder='Enter keywords...'
                   autoFocus
                   value = {fakeSearch}
-                  onChange={(e) => setFakeSearch(e.target.value)}
+                  // onChange={(e) => setFakeSearch(e.target.value)}
+                  onChange={handleFakeSearch}
                   style={{background:'none',outline:'none',fontSize:'1.5rem',color:'#fff',border:'none','::placeholder':{fontSize:'25px'}}}
                 />
               </div>              
@@ -76,7 +94,7 @@ function Navbar({ searchText, setSearchText }) {
             </div>
             {
               fakeSearch && 
-              <SearchResults fakeSearch={fakeSearch}/>
+              <SearchResults moviesData = {moviesData}/>
             }
             
             
