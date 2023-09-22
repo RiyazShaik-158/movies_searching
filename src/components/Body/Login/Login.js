@@ -1,12 +1,19 @@
-import { Button, TextField, createTheme } from '@mui/material';
+import { Button, createTheme } from '@mui/material';
 import React, { useState } from 'react';
 import './login.scss';
 import { ThemeProvider } from '@emotion/react';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+const sampleUser = {
+    userName : "Riyaz",
+    password : 1234
+}
+
+function Login({userLoggedIn,setUserLoggedIn}) {
 
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
+    const navigate = useNavigate();
 
     const theme = createTheme({
         components: {
@@ -30,12 +37,21 @@ function Login() {
         }
     })
 
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        // console.log(e)
+        if(e.target[0].value == sampleUser.userName && e.target[1].value == sampleUser.password){
+            alert("Login successful");
+            navigate('/')
+        }
+    }
+
   return (
     <div className='Login_head'>
       <div className='Login_contentBox'>
         <h1>Hello, <br/> Welcome back!</h1>
         <h4>LOGIN</h4>
-        <form className='Login_form'>
+        <form className='Login_form' onSubmit={handleLoginSubmit}>
             <label htmlFor='username'>Username</label>
             {/* <TextField 
                 name='username'
@@ -44,7 +60,7 @@ function Login() {
                 className='forUsername'
                 onChange={(e)=>setUsername(e.target.value)}
             /> */}
-            <input name='username' id='username' value={username} className='forUsername'  onChange={(e)=>setUsername(e.target.value)}/>
+            <input name='username'autoFocus id='username' value={username} className='forUsername'  onChange={(e)=>setUsername(e.target.value)}/>
             <label htmlFor='password'>Password</label>
             {/* <TextField 
                 name='password'
@@ -53,9 +69,9 @@ function Login() {
                 className='forUsername'
                 onChange={(e)=>setPassword(e.target.value)}
             /> */}
-            <input name='password' id='password' value={password} className='forUsername'  onChange={(e)=>setPassword(e.target.value)}/>
+            <input type='password' name='password' id='password' value={password} className='forUsername'  onChange={(e)=>setPassword(e.target.value)}/>
             <ThemeProvider theme={theme}>
-                <Button variant='contained' color='success'>Login</Button>
+                <Button variant='contained' color='success' type='submit'>Login</Button>
             </ThemeProvider>
             
         </form>

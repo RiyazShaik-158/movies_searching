@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [searchText,setSearchText] = useState("");
+  const [userLoggedIn,setUserLoggedIn] = useState(false);
 
   return (
     <div className='App'>
@@ -17,10 +18,10 @@ function App() {
           <Routes>
             <Route path='/' element={<HomeWelcome/>}></Route>
             <Route path='/home' element={<Home/>}></Route>
-            <Route path='/login' element={<Login/>}></Route>
+            <Route path='/login' element={<Login userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}  />}></Route>
           </Routes>
 
-        <Footer/>
+        {/* <Footer/> */}
       </BrowserRouter>
     </div>
   )
