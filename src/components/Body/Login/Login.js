@@ -70,7 +70,7 @@ function Login({userLoggedIn,setUserLoggedIn}) {
                 onChange={(e)=>setPassword(e.target.value)}
             /> */}
             <input type='password' name='password' id='password' value={password} className='forUsername'  onChange={(e)=>setPassword(e.target.value)}/>
-            <p className='forgotPasswordLink'>Forgot password?</p>
+            <p className='forgotPasswordLink' onClick={() => {navigate('/login/')}}>Forgot password?</p>
             <ThemeProvider theme={theme}>
                 <Button variant='contained' color='success' type='submit'>Login</Button>
             </ThemeProvider>
