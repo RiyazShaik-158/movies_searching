@@ -7,37 +7,51 @@
     color: #fff;
     background: linear-gradient(180deg,#252933,#323744);
     .Login_contentBox{
-        width: 25%;
+        width: 28%;
         height: 80%;
+        // max-height: 410px;
         background-color: #101217;
-        padding:3rem 4rem;
-        margin-top: 3rem;
+        padding:3.5rem 4rem;
+        margin-top: 3.6rem;
+        padding-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        // alig
-        .Login_form{
+        .LoginForm{
             display: flex;
             flex-direction: column;
-            gap: 15px;
-
-            .forgotPasswordLink{
-
-                &:hover{
-                    color: #e64d25;
-                    cursor: pointer;
+            gap: 40px;
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .Login_form{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+    
+                .forgotPasswordLink{
+    
+                    &:hover{
+                        color: #e64d25;
+                        cursor: pointer;
+                    }
                 }
+                
+    
+                .forUsername{
+                    border-radius:5px;
+                    background-color: #fff;
+                    font-size: 16px; 
+                    padding: 7px;
+                    padding-left: 10px;                    
+                }
+                
+    
+                
+                
             }
-            
-
-            .forUsername{
-                border-radius:5px;
-                background-color: #fff;
-                font-size: 15px;
-            }
-
-            
-            
         }
+       
     }
 }
