@@ -10,6 +10,8 @@ const sampleUser = {
     password : "1234"
 }
 
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
 function Login({userLoggedIn,setUserLoggedIn}) {
 
     const [username,setUsername] = useState("");
@@ -49,6 +51,14 @@ function Login({userLoggedIn,setUserLoggedIn}) {
         }
     }
 
+    const handleForgotPasswordSubmit = (e) => {
+        e.preventDefault();
+        // if(emailRegex.test(email) ===){
+
+        // }
+
+    }
+
   return (
     <div className='Login_head'>
       <div className='Login_contentBox' style={forgotPasswordClicked ? {maxHeight:'350px',borderBottom:'10px solid #e64d25'} : {maxHeight:'410px'}}>
@@ -61,6 +71,7 @@ function Login({userLoggedIn,setUserLoggedIn}) {
                 email = {email}
                 setEmail = {setEmail}
                 theme={theme}  
+                handleForgotPasswordSubmit = {handleForgotPasswordSubmit}
             /> 
             :
             <LoginForm 
