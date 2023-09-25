@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeWelcome from './components/Body/HomeWelcome/HomeWelcome';
 import Home from './components/Body/Home/Home';
 import Login from './components/Body/Login/Login';
+import SignUp from './components/Body/Login/LoginKids/SignUp.js/SignUp';
 // import ForgotPassword from './components/Body/Login/LoginKids/ForgotPassword';
 // import Footer from './components/Footer/Footer';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/' element={<HomeWelcome/>}></Route>
             <Route path='/home' element={<Home/>}></Route>
             <Route path='/login' element={<Login userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}  />}></Route>
+            <Route path='/signup' element={<SignUp/>}></Route>
             {/* <Route path='/login/' element={<ForgotPassword />}></Route> */}
           </Routes>
 
