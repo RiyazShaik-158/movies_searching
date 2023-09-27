@@ -4,13 +4,44 @@ import './login.scss';
 import { useNavigate } from 'react-router-dom';
 import LoginForm from './LoginKids/LoginForm';
 import ForgotPassword from './LoginKids/ForgotPassword';
+import SignUp from './LoginKids/SignUp.js/SignUp';
 
 const sampleUser = {
     userName : "Riyaz",
     password : "1234"
 }
 
-const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+const theme = createTheme({
+    components: {
+        MuiButton:{
+            styleOverrides:{
+                root : ({ownerState}) =>({
+                    ...(ownerState.variant === 'contained' &&
+                    ownerState.color === 'success' && {
+                        color : '#fff',
+                        fontWeight : '500',
+                        fontSize : '18px',
+                        fontFamily : 'inherit',
+                        textTransform : 'none',
+                        borderRadius:'6px',
+                        marginTop:"30px",
+                        width:"25%"
+                    })
+                })
+            }
+        }
+    }
+})
+
+export {theme};
+
+export const intiSignUpObj = {
+    registerEmail : "",
+    registerUsername : "",
+    registerPassword : "",
+    registerRepeat : ""
+}
+
 
 function Login({userLoggedIn,setUserLoggedIn}) {
 
@@ -18,29 +49,11 @@ function Login({userLoggedIn,setUserLoggedIn}) {
     const [password,setPassword] = useState("");
     const [email,setEmail] = useState("");
     const [forgotPasswordClicked,setForgotPasswordClicked] = useState(false);
+    const [signupClicked,setSignupClicked] = useState(false);
+    const [signUpDetails,setSignUpDetails] = useState(intiSignUpObj);
     const navigate = useNavigate();
 
-    const theme = createTheme({
-        components: {
-            MuiButton:{
-                styleOverrides:{
-                    root : ({ownerState}) =>({
-                        ...(ownerState.variant === 'contained' &&
-                        ownerState.color === 'success' && {
-                            color : '#fff',
-                            fontWeight : '500',
-                            fontSize : '18px',
-                            fontFamily : 'inherit',
-                            textTransform : 'none',
-                            borderRadius:'6px',
-                            marginTop:"30px",
-                            width:"25%"
-                        })
-                    })
-                }
-            }
-        }
-    })
+    
 
     const handleLoginSubmit = (e) => {
         e.preventDefault();
@@ -59,19 +72,38 @@ function Login({userLoggedIn,setUserLoggedIn}) {
 
     }
 
+    const handleSignUpFormSubmit = () => {
+
+    }
+
   return (
     <div className='Login_head'>
-      <div className='Login_contentBox' style={forgotPasswordClicked ? {maxHeight:'350px',borderBottom:'10px solid #e64d25'} : {maxHeight:'410px'}}>
+      <div className='Login_contentBox' style={forgotPasswordClicked ? signupClicked ? {maxHeight:'1000px',borderBottom:'10px solid #e64d25'} : {maxHeight:'350px',borderBottom:'10px solid #e64d25'} : {maxHeight:'450px'}}>
         <h1>Hello, <br/> Welcome back!</h1>
 
         {
             forgotPasswordClicked 
+            
             ?
+
+            signupClicked
+
+            ?
+
+            <SignUp
+                setSignUpDetails = {setSignUpDetails}
+                signUpDetails = {signUpDetails}
+                handleSignUpFormSubmit = {handleSignUpFormSubmit}
+            />
+
+            :
+
             <ForgotPassword 
                 email = {email}
                 setEmail = {setEmail}
                 theme={theme}  
                 handleForgotPasswordSubmit = {handleForgotPasswordSubmit}
+                setSignupClicked = {setSignupClicked}
             /> 
             :
             <LoginForm 
@@ -104,21 +136,3 @@ function Login({userLoggedIn,setUserLoggedIn}) {
 }
 
 export default Login;
-
-// below these are supposed to be used as login username and password inputs, will update these
-
-{/* <TextField 
-name='username'
-id='username'
-value={username}
-className='forUsername'
-onChange={(e)=>setUsername(e.target.value)}
-/>  */}
-
- {/* <TextField 
-                name='password'
-                id='password'
-                value={password}
-                className='forUsername'
-                onChange={(e)=>setPassword(e.target.value)}
-            /> */}

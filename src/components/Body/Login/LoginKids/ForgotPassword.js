@@ -2,11 +2,11 @@ import { Button } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import './forgot_password.scss'
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { theme } from '../Login';
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-function ForgotPassword({email,setEmail,theme,handleForgotPasswordSubmit}) {
+function ForgotPassword({email,setEmail,handleForgotPasswordSubmit,setSignupClicked}) {
   return (
     <div className='ForgotPasswordForm'>
       <h4>FORGOT PASSWORD?</h4>
@@ -23,7 +23,7 @@ function ForgotPassword({email,setEmail,theme,handleForgotPasswordSubmit}) {
               <Button variant='contained' color='success' type='submit' className='resetPasswordButton'>Reset Password</Button>
           </ThemeProvider>
       </form>
-      <p className='signUp_link'>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
+      <p className='signUp_link'>Don't have an account? <span onClick={() => setSignupClicked(true)}>Sign Up</span></p>
     </div>
   )
 }

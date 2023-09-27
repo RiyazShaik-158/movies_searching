@@ -1,5 +1,5 @@
 .Login_head{
-    height: inherit;
+    height: auto;
     width: inherit;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@
         // max-height: 410px;
         background-color: #101217;
         padding:3.5rem 4rem;
-        margin-top: 3.6rem;
+        margin-top: .8rem;
         padding-top: 4rem;
         display: flex;
         flex-direction: column;
@@ -24,6 +24,7 @@
             h4{
                 font-size: 16px;
                 font-weight: 400;
+                margin-bottom: 15px;
             }
             .Login_form{
                 display: flex;

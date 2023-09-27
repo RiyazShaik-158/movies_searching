@@ -1,4 +1,4 @@
-.ForgotPasswordForm{
+.SignUpForm{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -6,39 +6,41 @@
         font-weight: 400;
     }
 
-    .ForgotPassword_form{
+    .SignUp_form{
         display: flex;
         flex-direction: column;
         gap: 15px;
 
-        .forEmail{
+        .imp_input{
+            color: red;
+        }
+
+        .forRegisterEmail{
             font-size: 16px; 
             padding: 7px;
             padding-left: 10px;
-            border-radius: 5px;       
+            border-radius: 5px;
         }
 
-        .resetPasswordButton{
+        .createAccountButton{
             width: 100%;
-            margin-top: 10px
         }
-
-        
     }
 
-    .signUp_link{
+    .toLoginLine{
         font-size: 14px;
         text-align: center;
         cursor: pointer;
         color: rgba(270,270,270,0.35);
 
-        span{
+        a{
             color: #fff;
             padding-left: 3px;
+            text-decoration: none;
             &:hover{
                 color:#e64d25;
             }
         }
-
     }
+
 }
