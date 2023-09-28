@@ -25,7 +25,8 @@ const theme = createTheme({
                         textTransform : 'none',
                         borderRadius:'6px',
                         marginTop:"30px",
-                        width:"25%"
+                        width:"25%",
+                        transition : '0.3s all ease'
                     })
                 })
             }
@@ -72,8 +73,12 @@ function Login({userLoggedIn,setUserLoggedIn}) {
 
     }
 
-    const handleSignUpFormSubmit = () => {
-
+    const handleSignUpFormSubmit = (event) => {
+        event.preventDefault();
+        if(event.target[0].value && event.target[1].value && event.target[2].value && event.target[3].value && event.target[2].value === event.target[3].value){
+            console.log('register successful');
+            navigate('/login');
+        }
     }
 
   return (
