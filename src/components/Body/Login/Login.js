@@ -87,14 +87,10 @@ function Login({userLoggedIn,setUserLoggedIn}) {
         <h1>Hello, <br/> Welcome back!</h1>
 
         {
-            forgotPasswordClicked 
-            
+            forgotPasswordClicked             
             ?
-
             signupClicked
-
             ?
-
             <SignUp
                 setSignUpDetails = {setSignUpDetails}
                 signUpDetails = {signUpDetails}
