@@ -72,7 +72,7 @@ function Navbar({ searchText, setSearchText }) {
         <Modal
           open={searchStarting}
           onClose={handleSearchClose}
-          sx={{backgroundColor:'rgba(0,0,0,0.8)'}}
+          sx={{backgroundColor:'#fff'}}
         >
           <div style={{width:'inherit',height:'inherit',color:'#fff'}}>
             <div style={{width:'inherit',height:'5rem',display:'flex',alignItems:'center',padding:'0 40px',justifyContent:'space-between',marginTop:'20px'}}>
